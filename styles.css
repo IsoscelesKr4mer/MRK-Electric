@@ -145,6 +145,9 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
+  background: rgba(17,30,54,.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition:
     background var(--transition),
     box-shadow var(--transition);
