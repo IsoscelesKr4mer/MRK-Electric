@@ -208,7 +208,7 @@ All of the following were implemented in `index.html`, `robots.txt`, and `sitema
 | Site-wide | No real photos / images | **High** | ⚠️ Action required |
 | Site-wide | No dedicated service landing pages | **Critical** | ⚠️ Action required |
 | Site-wide | No external reviews (Google, Yelp) | **Critical** | ⚠️ Action required |
-| Site-wide | WA electrical contractor license number not displayed | **Medium** | ⚠️ Action required |
+| Site-wide | WA electrical contractor license number not displayed | **Medium** | ✅ Fixed — #MRKELEI835BL added to footer |
 | Site-wide | No Google Analytics / Search Console | **High** | ⚠️ Action required |
 | Site-wide | `sameAs` array in schema is empty | **Medium** | ✅ Fixed — GBP URL added |
 
@@ -243,10 +243,10 @@ All of the following were implemented in `index.html`, `robots.txt`, and `sitema
 | Image assets | ⚠️ Warning | No photos exist. `og-image.jpg` referenced in meta tags — must be created. |
 | Favicon | ⚠️ Warning | Tags added; actual `favicon.ico` and `apple-touch-icon.png` files need to be created. |
 | Google Business Profile | ✅ Claimed | Profile claimed. Complete with hours, services, photos, and reviews. |
-| Google Search Console | ❌ Fail | No verification meta tag or DNS record present. |
-| Google Analytics | ❌ Fail | `gtag` hook exists in script.js but no GA tag in the HTML. |
+| Google Search Console | ✅ Pass | Verified and sitemap submitted (Mar 4, 2026). 1 page discovered, status: Success. |
+| Google Analytics | ✅ Pass | GA4 tag (G-8DRZX7H8Z5) added to `<head>`. Phone call click tracking active via existing gtag hook in script.js. |
 | Real photos on page | ❌ Fail | No photos. Competitor sites use project photos for E-E-A-T signals. |
-| WA license number displayed | ❌ Fail | "WA State Electrical Contractor License" mentioned but number not shown. |
+| WA license number displayed | ✅ Pass | License #MRKELEI835BL displayed in footer. |
 | Core Web Vitals — LCP | ✅ Good | No large images above the fold. CSS-only hero background. Fast LCP expected. |
 | Core Web Vitals — CLS | ✅ Good | No layout shift sources visible. Fixed header is stable. |
 | Core Web Vitals — INP | ✅ Good | Minimal JS. Passive scroll listeners. Low interaction latency expected. |
@@ -309,9 +309,9 @@ Every major competitor in the Issaquah/Bellevue electrician space maintains dedi
 | ~~**1. Claim Google Business Profile**~~ ✅ Done — profile claimed. Next step: add photos, complete all fields, and begin requesting reviews. | Critical | Complete |
 | **2. Add `og-image.jpg`** — create a 1200×630px branded image (navy background, "MRK Electric — Licensed Master Electrician" text, phone number). Without it, social shares show a blank card. | High | 30 min |
 | **3. Add `favicon.ico` and `apple-touch-icon.png`** — the tags are now in the HTML; create the actual files. | Low | 15 min |
-| **4. Add WA Electrical Contractor License number** to the footer. Replace "WA State Electrical Contractor License" with your actual number. | Medium | 5 min |
-| **5. Add Google Search Console verification** tag to `<head>` and submit the new `sitemap.xml`. Start tracking keyword impressions and click-through rates immediately. | High | 30 min |
-| **6. Add Google Analytics 4 tag** — the `gtag` hook already exists in `script.js` but there is no GA tag in the HTML. Add the GA4 snippet and set up phone call click conversion tracking. | High | 30 min |
+| ~~**4. Add WA Electrical Contractor License number**~~ ✅ Done — #MRKELEI835BL added to footer. | Medium | Complete |
+| ~~**5. Add Google Search Console**~~ ✅ Done — verified, sitemap submitted and reading successfully. Check the Performance report in ~1–2 weeks for first keyword impression data. | High | Complete |
+| ~~**6. Add Google Analytics 4 tag**~~ ✅ Done — GA4 tag G-8DRZX7H8Z5 added to `<head>`. Phone call clicks tracked automatically via existing gtag hook. | High | Complete |
 | ~~**7. Add `sameAs` links to Schema**~~ ✅ Done — GBP URL added. Add Yelp, Facebook, or Nextdoor URLs to the array if/when those profiles exist. | Medium | Complete |
 | **8. Request reviews** — text or email your last 10 completed jobs with a direct Google review link. Reviews are the #1 local pack ranking factor and MRK Electric needs volume to compete. | Critical | 1 hour |
 
