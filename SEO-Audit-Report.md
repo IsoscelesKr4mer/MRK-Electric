@@ -240,8 +240,8 @@ All of the following were implemented in `index.html`, `robots.txt`, and `sitema
 | Images with alt text | ✅ Pass | Site uses inline SVGs only — no `<img>` tags to miss alt text on. |
 | Smooth scroll CSS | ✅ Pass | `html { scroll-behavior: smooth }` set. |
 | Internal linking | ⚠️ Warning | All links are anchor-based (single page). No multi-page link equity flow possible. |
-| Image assets | ⚠️ Warning | No photos exist. `og-image.jpg` referenced in meta tags — must be created. |
-| Favicon | ⚠️ Warning | Tags added; actual `favicon.ico` and `apple-touch-icon.png` files need to be created. |
+| Image assets | ✅ Pass | `og-image.jpg` generated (1200×630px, 92KB) — branded navy/amber social share image. |
+| Favicon | ✅ Pass | `favicon.ico` (16/32/48px) and `apple-touch-icon.png` (180×180px) generated. |
 | Google Business Profile | ✅ Claimed | Profile claimed. Complete with hours, services, photos, and reviews. |
 | Google Search Console | ✅ Pass | Verified and sitemap submitted (Mar 4, 2026). 1 page discovered, status: Success. |
 | Google Analytics | ✅ Pass | GA4 tag (G-8DRZX7H8Z5) added to `<head>`. Phone call click tracking active via existing gtag hook in script.js. |
@@ -307,8 +307,8 @@ Every major competitor in the Issaquah/Bellevue electrician space maintains dedi
 | Action | Expected Impact | Effort |
 |---|---|---|
 | ~~**1. Claim Google Business Profile**~~ ✅ Done — profile claimed. Next step: add photos, complete all fields, and begin requesting reviews. | Critical | Complete |
-| **2. Add `og-image.jpg`** — create a 1200×630px branded image (navy background, "MRK Electric — Licensed Master Electrician" text, phone number). Without it, social shares show a blank card. | High | 30 min |
-| **3. Add `favicon.ico` and `apple-touch-icon.png`** — the tags are now in the HTML; create the actual files. | Low | 15 min |
+| ~~**2. Add `og-image.jpg`**~~ ✅ Done — 1200×630px branded image generated (navy/amber, phone, city list, domain). | High | Complete |
+| ~~**3. Add `favicon.ico` and `apple-touch-icon.png`**~~ ✅ Done — multi-size favicon and 180×180 Apple touch icon generated. | Low | Complete |
 | ~~**4. Add WA Electrical Contractor License number**~~ ✅ Done — #MRKELEI835BL added to footer. | Medium | Complete |
 | ~~**5. Add Google Search Console**~~ ✅ Done — verified, sitemap submitted and reading successfully. Check the Performance report in ~1–2 weeks for first keyword impression data. | High | Complete |
 | ~~**6. Add Google Analytics 4 tag**~~ ✅ Done — GA4 tag G-8DRZX7H8Z5 added to `<head>`. Phone call clicks tracked automatically via existing gtag hook. | High | Complete |
