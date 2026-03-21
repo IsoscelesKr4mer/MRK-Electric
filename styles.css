@@ -4,16 +4,20 @@
 
 :root {
   --navy:        #1B2A4A;
-  --navy-dark:   #111E36;
+  --navy-dark:   #0F1B30;
   --navy-light:  #243660;
-  --amber:       #F5A623;
-  --amber-dark:  #D4881A;
-  --amber-light: #FFCB5A;
+  --sky:         #8EC8E8;
+  --sky-light:   #B5DCF0;
+  --sky-pale:    #D9EEF7;
+  --sky-dark:    #6AAFCF;
+  --amber:       #E2C044;
+  --amber-dark:  #C5A235;
+  --amber-light: #F0D76A;
   --white:       #FFFFFF;
-  --gray-50:     #F7F8FB;
-  --gray-100:    #EFF1F6;
-  --gray-200:    #DDE1EC;
-  --gray-400:    #9BA5BA;
+  --gray-50:     #F4F7FA;
+  --gray-100:    #EAEEF4;
+  --gray-200:    #D5DAE6;
+  --gray-400:    #8E99AE;
   --gray-600:    #5C6882;
   --text:        #1A202C;
   --text-muted:  #5C6882;
@@ -73,7 +77,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--sky);
   margin-bottom: 14px;
 }
 .section-header {
@@ -110,11 +114,11 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 .btn-primary {
   background: var(--amber);
   color: var(--navy-dark);
-  box-shadow: 0 2px 10px rgba(245,166,35,.28);
+  box-shadow: 0 2px 10px rgba(226,192,68,.30);
 }
 .btn-primary:hover {
   background: var(--amber-dark);
-  box-shadow: 0 4px 20px rgba(245,166,35,.40);
+  box-shadow: 0 4px 20px rgba(226,192,68,.42);
   transform: translateY(-2px);
 }
 
@@ -167,14 +171,31 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 }
 .nav-logo {
   display: flex;
-  align-items: baseline;
-  gap: 5px;
+  align-items: center;
+  gap: 0;
   font-family: var(--font-heading);
   font-size: 22px;
   font-weight: 800;
 }
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  color: var(--amber);
+  font-weight: 800;
+  font-size: 15px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2.5px solid var(--sky);
+  position: relative;
+  flex-shrink: 0;
+}
 .logo-mrk     { color: var(--amber); }
 .logo-electric { color: var(--white); font-weight: 500; }
+.logo-inc { color: rgba(255,255,255,.5); font-weight: 400; font-size: 14px; margin-left: 4px; }
 
 .nav-links {
   display: flex;
@@ -238,7 +259,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 70% at 75% 45%, rgba(245,166,35,.07) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 70% at 75% 45%, rgba(142,200,232,.06) 0%, transparent 65%),
     radial-gradient(ellipse 50% 60% at 15% 85%, rgba(27,42,74,.9) 0%, transparent 70%);
 }
 .hero-bg::before {
@@ -246,8 +267,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(245,166,35,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245,166,35,.035) 1px, transparent 1px);
+    linear-gradient(rgba(142,200,232,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(142,200,232,.03) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 .hero-bg::after {
@@ -272,9 +293,9 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  background: rgba(245,166,35,.10);
-  border: 1px solid rgba(245,166,35,.22);
-  color: var(--amber);
+  background: rgba(142,200,232,.12);
+  border: 1px solid rgba(142,200,232,.28);
+  color: var(--sky-light);
   font-family: var(--font-heading);
   font-size: 12.5px;
   font-weight: 700;
@@ -319,7 +340,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   font-size: 13.5px;
   font-weight: 500;
 }
-.trust-item svg { color: var(--amber); fill: var(--amber); flex-shrink: 0; }
+.trust-item svg { color: var(--sky); fill: var(--sky); flex-shrink: 0; }
 
 .hero-scroll-hint {
   position: absolute;
@@ -355,23 +376,24 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(245,166,35,.28);
+  border-color: rgba(142,200,232,.45);
 }
 .service-icon {
   width: 54px;
   height: 54px;
-  background: linear-gradient(140deg, rgba(245,166,35,.13), rgba(245,166,35,.05));
-  border-radius: var(--radius-sm);
+  background: linear-gradient(140deg, rgba(142,200,232,.18), rgba(142,200,232,.06));
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 22px;
+  border: 1.5px solid rgba(142,200,232,.22);
 }
 .service-icon svg {
   width: 26px;
   height: 26px;
-  color: var(--amber-dark);
-  stroke: var(--amber-dark);
+  color: var(--sky-dark);
+  stroke: var(--sky-dark);
 }
 .service-card h3 {
   font-size: 16.5px;
@@ -423,8 +445,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 .feature-icon {
   width: 46px;
   height: 46px;
-  background: var(--navy);
-  border-radius: 11px;
+  background: var(--sky);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,8 +455,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 .feature-icon svg {
   width: 20px;
   height: 20px;
-  color: var(--amber);
-  stroke: var(--amber);
+  color: var(--navy);
+  stroke: var(--navy);
 }
 .feature h3 {
   font-size: 15.5px;
@@ -461,8 +483,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(245,166,35,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245,166,35,.025) 1px, transparent 1px);
+    linear-gradient(rgba(142,200,232,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(142,200,232,.025) 1px, transparent 1px);
   background-size: 56px 56px;
   pointer-events: none;
 }
@@ -485,7 +507,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 }
 .testimonial-card:hover {
   background: rgba(255,255,255,.08);
-  border-color: rgba(245,166,35,.28);
+  border-color: rgba(142,200,232,.35);
 }
 .stars {
   color: var(--amber);
@@ -509,7 +531,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--amber), var(--amber-dark));
+  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -628,7 +650,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   border-radius: 100px;
   transition: border-color var(--transition), background var(--transition);
 }
-.area-tags li:hover { border-color: var(--amber); background: rgba(245,166,35,.05); }
+.area-tags li:hover { border-color: var(--sky); background: rgba(142,200,232,.08); }
 .area-note {
   font-size: 15px !important;
   color: var(--gray-400) !important;
@@ -719,15 +741,15 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
 }
 a.contact-detail:hover {
-  border-color: var(--amber);
-  box-shadow: 0 4px 18px rgba(245,166,35,.12);
+  border-color: var(--sky);
+  box-shadow: 0 4px 18px rgba(142,200,232,.18);
   transform: translateY(-2px);
 }
 .contact-detail-icon {
   width: 44px;
   height: 44px;
-  background: var(--navy);
-  border-radius: 11px;
+  background: var(--sky);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -736,8 +758,8 @@ a.contact-detail:hover {
 .contact-detail-icon svg {
   width: 20px;
   height: 20px;
-  color: var(--amber);
-  stroke: var(--amber);
+  color: var(--navy);
+  stroke: var(--navy);
 }
 .contact-detail strong {
   display: block;
@@ -780,7 +802,7 @@ a.contact-detail:hover {
   color: var(--navy);
   margin-bottom: 7px;
 }
-.form-group label span { color: var(--amber-dark); margin-left: 2px; }
+.form-group label span { color: var(--sky-dark); margin-left: 2px; }
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -800,8 +822,8 @@ a.contact-detail:hover {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--amber);
-  box-shadow: 0 0 0 3px rgba(245,166,35,.14);
+  border-color: var(--sky);
+  box-shadow: 0 0 0 3px rgba(142,200,232,.18);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder { color: var(--gray-400); }
@@ -832,7 +854,7 @@ a.contact-detail:hover {
   grid-template-columns: 1.6fr 1fr 1fr;
   gap: 64px;
   padding-bottom: 56px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
+  border-bottom: 1px solid rgba(142,200,232,.12);
 }
 .footer-brand .nav-logo { margin-bottom: 18px; }
 .footer-brand p {
@@ -857,7 +879,7 @@ a.contact-detail:hover {
   font-size: 14.5px;
   transition: color var(--transition);
 }
-.footer-links li a:hover { color: var(--amber); }
+.footer-links li a:hover { color: var(--sky); }
 
 .footer-contact { display: flex; flex-direction: column; gap: 10px; }
 .footer-contact a,
@@ -867,7 +889,7 @@ a.contact-detail:hover {
   transition: color var(--transition);
   line-height: 1.6;
 }
-.footer-contact a:hover { color: var(--amber); }
+.footer-contact a:hover { color: var(--sky); }
 
 .footer-bottom {
   padding: 24px 0;
@@ -878,6 +900,31 @@ a.contact-detail:hover {
   gap: 8px;
 }
 .footer-bottom p { font-size: 13px; color: rgba(255,255,255,.3); }
+
+/* ============================================================
+   Brand-card elements
+   ============================================================ */
+.footer-license-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 6px 14px;
+  background: rgba(142,200,232,.08);
+  border: 1px solid rgba(142,200,232,.18);
+  border-radius: 100px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--sky);
+}
+.footer-license-badge svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--sky);
+}
 
 /* ============================================================
    Scroll-triggered Animations
