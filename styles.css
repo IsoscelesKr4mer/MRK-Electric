@@ -402,9 +402,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; }
   backdrop-filter: blur(4px);
   z-index: 150;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--dur-base) var(--ease-out);
 }
-.mobile-overlay.visible { opacity: 1; }
+.mobile-overlay.visible { opacity: 1; pointer-events: auto; }
 
 /* ============================================================
    Hero
