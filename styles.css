@@ -594,6 +594,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; }
   background: rgba(255,255,255,.09);
   transform: translateY(-4px);
 }
+.stat-value {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 .stat-num {
   font-family: var(--font-display);
   font-size: 48px;
@@ -601,17 +606,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; }
   color: var(--gold);
   line-height: 1;
   letter-spacing: -.03em;
-  display: inline-block;
 }
 .stat-suffix {
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 700;
   color: var(--gold);
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 8px;
-  margin-left: 2px;
+  padding-top: 6px;
 }
 .stat-label {
   font-family: var(--font-body);
@@ -1583,9 +1584,11 @@ a.contact-detail:hover .contact-detail-icon { transform: scale(1.1) rotate(-5deg
   .hero-title { font-size: clamp(38px, 11vw, 52px); }
   .hero-actions { flex-direction: column; }
   .btn-hero { width: 100%; }
-  .hero-stats { flex-direction: column; align-items: stretch; }
-  .stat-card { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 18px 20px; }
+  .hero-stats { flex-direction: column; align-items: stretch; margin-bottom: 48px; }
+  .stat-card { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 18px 20px; }
+  .stat-value { justify-content: flex-start; }
   .stat-num { font-size: 32px; }
+  .stat-suffix { font-size: 16px; padding-top: 4px; }
   .stat-label { margin: 0; font-size: 11px; }
 }
 
