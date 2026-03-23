@@ -1577,6 +1577,8 @@ a.contact-detail:hover .contact-detail-icon { transform: scale(1.1) rotate(-5deg
 
   .review-cta-inner { flex-direction: column; padding: 28px 24px; }
 
+  .hero-scroll-hint { display: none; }
+
   .cursor-dot, .cursor-ring { display: none !important; }
 }
 
