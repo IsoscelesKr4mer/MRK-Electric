@@ -669,6 +669,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; }
 .service-card--featured { grid-column: span 1; grid-row: span 2; }
 .service-card--wide     { grid-column: span 2; }
 
+a.service-card { text-decoration: none; color: inherit; display: block; }
 .service-card {
   position: relative;
   background: var(--white);
@@ -676,7 +677,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; }
   border-radius: var(--r-lg);
   padding: 32px 28px;
   overflow: hidden;
-  cursor: default;
+  cursor: pointer;
   transition:
     transform var(--dur-base) var(--ease-snap),
     box-shadow var(--dur-base) var(--ease-out),
@@ -1068,6 +1069,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; }
   border-radius: var(--r-full);
   transition: all var(--dur-base) var(--ease-snap);
 }
+.area-tags li a { text-decoration: none; color: inherit; display: block; }
 .area-tags li:hover {
   background: var(--navy-dark);
   color: var(--white);
