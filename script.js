@@ -396,4 +396,31 @@
     });
   });
 
+  // ── FAQ Accordion ──────────────────────────────────────────
+  // Works on all service pages. Clicks on .faq-question toggle
+  // the parent .faq-item's "active" class to show/hide answers.
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.style.cursor = 'pointer';
+    // Ensure every question has a toggle indicator
+    if (!q.querySelector('.faq-toggle')) {
+      const toggle = document.createElement('span');
+      toggle.className = 'faq-toggle';
+      toggle.textContent = '▾';
+      toggle.setAttribute('aria-hidden', 'true');
+      q.appendChild(toggle);
+    }
+    // Remove inline onclick to avoid double-firing
+    q.removeAttribute('onclick');
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      if (!item) return;
+      // Close siblings
+      const container = item.parentElement;
+      container.querySelectorAll('.faq-item.active').forEach(sibling => {
+        if (sibling !== item) sibling.classList.remove('active');
+      });
+      item.classList.toggle('active');
+    });
+  });
+
 })();

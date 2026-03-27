@@ -1082,6 +1082,50 @@ a.service-card { text-decoration: none; color: inherit; display: block; }
   font-style: italic;
 }
 
+/* ── FAQ Accordion (service pages) ────────────────────────── */
+.faq-container { max-width: 800px; }
+.faq-item {
+  border-bottom: 1px solid rgba(27,42,74,.1);
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--navy-dark);
+  gap: 16px;
+}
+.faq-question h3 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  line-height: 1.4;
+}
+.faq-question:hover { color: var(--gold-dark); }
+.faq-toggle {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  transition: transform var(--dur-base) var(--ease-out);
+  color: var(--sky);
+}
+.faq-item.active .faq-toggle { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--dur-slow) var(--ease-out), padding var(--dur-base) var(--ease-out);
+  color: #5c6882;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+.faq-item.active .faq-answer {
+  max-height: 600px;
+  padding-bottom: 20px;
+}
+
 /* CTA card */
 .cta-card {
   background: var(--white);
