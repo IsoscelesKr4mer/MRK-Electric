@@ -97,12 +97,6 @@
  color: var(--gold);
  }
 
- @media (max-width: 768px) {
- .nav-links {
- display: none;
- }
- }
-
  /* Breadcrumb */
  .breadcrumb {
  background-color: var(--off-white);
@@ -123,18 +117,29 @@
 
  /* Hero Section */
  .hero {
- background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+ background: linear-gradient(150deg, var(--navy-dark) 0%, var(--navy) 100%);
  color: white;
- padding: 4rem 2rem;
+ padding: calc(var(--header-h) + var(--sp-xl)) var(--sp-lg) var(--sp-xl);
+ position: relative;
+ overflow: hidden;
  }
 
  .hero-container {
- max-width: 1200px;
+ max-width: var(--container);
  margin: 0 auto;
  display: grid;
  grid-template-columns: 1fr 1fr;
  gap: 3rem;
  align-items: center;
+ position: relative;
+ z-index: 1;
+ }
+
+ @media (max-width: 900px) {
+ .hero-container {
+ grid-template-columns: 1fr;
+ }
+ .hero-image { display: none; }
  }
 
  .hero h1 {

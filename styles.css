@@ -428,9 +428,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; }
   pointer-events: none;
   z-index: 0;
 }
-/* Wrapper divs used by various service pages */
-.hero .hero-content,
-.hero .hero-container {
+/* Wrapper div used by most service pages */
+.hero .hero-content {
   max-width: 760px;
   position: relative;
   z-index: 1;
